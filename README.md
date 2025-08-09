@@ -114,3 +114,63 @@ If not, it interpolates between the two closest values.
 
 If you want to match a specific textbook method, you can use NumPy's percentile with different method arguments.
 ```
+
+
+#### Data Frames in Pandas
+
+First Data Dictionary is created.
+To display data frame for the data dictionary, 
+df = pd.DataFrame(data)
+
+If we create a data dictionary with single row, we cannot call the data frame like above.
+df = pd.DataFrame([data])
+we need to wrap it as [list of data]
+
+We can create data frames using numpy arrays.
+
+```
+import numpy as np
+
+data_array = np.array([[1,2,3],[4,5,6],[7,8,9]])
+
+df_np_array = pd.DataFrame(data_array, columns =["Column1","Column2","Column3"])
+```
+
+Type of data frame array:
+
+```
+type(df_np_array)
+
+This returns: pandas.core.frame.DataFrame
+```
+
+#### To CSV in Pandas - Data Frames
+
+Writing dataframe to csv file:
+```
+df.to_csv("newdatadict.csv", index=False)
+```
+
+Writing dataframe back from CSV file
+```
+df_read_newdatadict_csv = pd.read_csv("newdatadict.csv")
+
+df_read_newdatadict_csv
+```
+#### To Excel in Pandas - Data Frames
+
+Pandas needs openpyxl library to be installed to write Excel files.
+
+```
+pip install openpyxl
+```
+```
+df_dict.to_excel("newdatadict.xlsx", index=False)
+
+df_read_newdatadict_excel = pd.read_excel("newdatadict.xlsx")
+
+df_read_newdatadict_excel
+```
+
+Pandas also supports JSON, SQL, HTML and Apache parquet files.
+
