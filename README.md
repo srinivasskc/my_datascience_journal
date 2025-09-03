@@ -174,3 +174,25 @@ df_read_newdatadict_excel
 
 Pandas also supports JSON, SQL, HTML and Apache parquet files.
 
+#### To Have Plotting in Pandas - Time Series Data Visualization
+
+Pandas needs matplotlib library to be installed to have visualization.
+```
+pip install matplotlib
+```
+```
+import matplotlib.pyplot as plt
+plt.plot(time_series_data, linestyle='--', color='blue', marker='o', label='Dashed Line')
+plt.title("Time Series Visualization")
+plt.xlabel("Date")
+plt.ylabel("Values")
+# To show label on the plot
+plt.legend(loc="Best")
+# To show the plot on jupyter notebook
+plt.show()
+
+Different markers: o, s, ^, D, x, +, . 
+```
+
+Pandas also supports JSON, SQL, HTML and Apache parquet files.
+
