@@ -194,5 +194,4 @@ plt.show()
 Different markers: o, s, ^, D, x, +, . 
 ```
 
-Pandas also supports JSON, SQL, HTML and Apache parquet files.
 
